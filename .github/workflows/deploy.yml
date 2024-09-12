@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                echo We're deploying!!!
+                echo We are deploying
             - name: trigger start event
               uses: mmayer1/github-actions/triggerEvent@main
               with:
@@ -19,7 +19,7 @@ jobs:
                 eventName: deploy-started
             - run: |
                 sleep 10
-                echo We're done with deploy
+                echo We are done with deploy
             - name: trigger end event
               uses: mmayer1/github-actions/triggerEvent@main
               with:
