@@ -4,19 +4,19 @@ on:
     pull_request:
       types:
         - closed
-  
+
 jobs:
     send_event:
         if: github.event.pull_request.merged == true
         runs-on: ubuntu-latest
         steps:
-            - run: |
-                echo The PR was merged
             - name: get card id
               id: getCardId
               uses: mmayer1/github-actions/extractCardId@main
               with:
                 inputText: ${{ github.event.pull_request.title }}
+            - run: |
+                echo The PR was merged ${{ steps.getCardId.outputs.cardId }}
             - name: trigger event
               uses: mmayer1/github-actions/triggerEvent@main
               with:
@@ -25,4 +25,4 @@ jobs:
                 boardId: 10136774076
                 cardId: ${{ steps.getCardId.outputs.cardId }}
                 eventName: "pr-merged"
-          
+
