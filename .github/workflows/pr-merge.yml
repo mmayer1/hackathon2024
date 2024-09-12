@@ -10,8 +10,8 @@ jobs:
         if: github.event.pull_request.merged == true
         runs-on: ubuntu-latest
         steps:
-            - name: get card id
-              id: getCardId
+            - id: getCardId
+              name: get card id
               uses: mmayer1/github-actions/extractCardId@main
               with:
                 inputText: ${{ github.event.pull_request.title }}
