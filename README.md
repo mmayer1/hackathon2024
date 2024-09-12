@@ -4,4 +4,4 @@
  2. Merge the PR
  3. The corresponding card should move, as long as it's not blocked status
 
-Do stuff - 5
+Do stuff - 6
