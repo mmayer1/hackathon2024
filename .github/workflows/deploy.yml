@@ -18,7 +18,7 @@ jobs:
                 boardId: 10136774076
                 eventName: deploy-started
             - run: |
-                sleep 10
+                sleep 15
                 echo We are done with deploy
             - name: trigger end event
               uses: mmayer1/github-actions/triggerEvent@main
