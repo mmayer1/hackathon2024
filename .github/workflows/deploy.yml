@@ -1,0 +1,30 @@
+name: Deploy a release
+
+on:
+  repository_dispatch:
+    types: [start-deployment]
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo We're deploying!!!
+            - name: trigger start event
+              uses: mmayer1/github-actions/triggerEvent@main
+              with:
+                host: https://platform-dev.leankit.io
+                apiToken: ${{ secrets.D03LEANKIT }}
+                boardId: 10136774076
+                eventName: deploy-started
+            - run: |
+                sleep 10
+                echo We're done with deploy
+            - name: trigger end event
+              uses: mmayer1/github-actions/triggerEvent@main
+              with:
+                host: https://platform-dev.leankit.io
+                apiToken: ${{ secrets.D03LEANKIT }}
+                boardId: 10136774076
+                eventName: deploy-complete
+
