@@ -1,4 +1,5 @@
-name: Move card
+# Sends the pr-merged event on a PR that has a card title including an ID in parens like (12345)
+name: PR Merge
 
 on:
     pull_request:
@@ -25,4 +26,3 @@ jobs:
                 boardId: 10136774076
                 cardId: ${{ steps.getCardId.outputs.cardId }}
                 eventName: pr-merged
-
