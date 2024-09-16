@@ -26,3 +26,4 @@ jobs:
                 boardId: 10136774076
                 cardId: ${{ steps.getCardId.outputs.cardId }}
                 eventName: pr-merged
+
