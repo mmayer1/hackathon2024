@@ -19,7 +19,7 @@ jobs:
                 eventName: deploy-started
             - run: |
                 sleep 10
-                echo Deployment is complete
+                echo Deployment is done
             - name: trigger end event
               uses: mmayer1/github-actions/triggerEvent@main
               with:
