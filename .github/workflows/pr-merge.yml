@@ -19,11 +19,10 @@ jobs:
             - run: |
                 echo The PR was merged ${{ steps.getCardId.outputs.cardId }}
             - name: trigger event
-              uses: mmayer1/github-actions/triggerEvent@main
+              uses: mmayer1/github-actions/triggerCardEvent@main
               with:
                 host: https://platform-dev.leankit.io
                 apiToken: ${{ secrets.D03LEANKIT }}
-                boardId: 10136774076
                 cardId: ${{ steps.getCardId.outputs.cardId }}
                 eventName: pr-merged
 
