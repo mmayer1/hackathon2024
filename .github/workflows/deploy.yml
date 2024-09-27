@@ -27,4 +27,3 @@ jobs:
                 apiToken: ${{ secrets.D03LEANKIT }}
                 boardId: 10136774076
                 eventName: deploy-complete
-
