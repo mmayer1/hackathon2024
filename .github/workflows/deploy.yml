@@ -1,3 +1,4 @@
+# Fakes a deployment by waiting 10 seconds before sending a board event for deploy-complete
 name: Deploy a release
 
 on:
