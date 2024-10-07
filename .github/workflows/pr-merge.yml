@@ -25,4 +25,3 @@ jobs:
                 apiToken: ${{ secrets.D03LEANKIT }}
                 cardId: ${{ steps.getCardId.outputs.cardId }}
                 eventName: pr-merged
-
