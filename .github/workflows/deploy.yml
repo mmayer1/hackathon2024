@@ -11,8 +11,8 @@ jobs:
         steps:
             - run: |
                 echo We are deploying
-            - name: trigger start event
-              uses: mmayer1/github-actions/triggerBoardEvent@main
+            - name: initiate start event
+              uses: mmayer1/github-actions/initiateBoardEvent@main
               with:
                 host: https://platform-dev.leankit.io
                 apiToken: ${{ secrets.D03LEANKIT }}
@@ -21,8 +21,8 @@ jobs:
             - run: |
                 sleep 10
                 echo Deployment is done
-            - name: trigger end event
-              uses: mmayer1/github-actions/triggerBoardEvent@main
+            - name: initiate end event
+              uses: mmayer1/github-actions/initiateBoardEvent@main
               with:
                 host: https://platform-dev.leankit.io
                 apiToken: ${{ secrets.D03LEANKIT }}
