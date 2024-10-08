@@ -18,8 +18,8 @@ jobs:
                 inputText: ${{ github.event.pull_request.title }}
             - run: |
                 echo The PR was merged ${{ steps.getCardId.outputs.cardId }}
-            - name: trigger event
-              uses: mmayer1/github-actions/triggerCardEvent@main
+            - name: initiate event
+              uses: mmayer1/github-actions/initiateCardEvent@main
               with:
                 host: https://platform-dev.leankit.io
                 apiToken: ${{ secrets.D03LEANKIT }}
