@@ -7,4 +7,4 @@ These are the steps:
   3. The corresponding card will move to ready for test, as long as it is not in a blocked status
   4. Doc cards will move to recently completed items
 
-That's it!
+That's all folks!
